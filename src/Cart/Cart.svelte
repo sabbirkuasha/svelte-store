@@ -1,18 +1,28 @@
 <script>
     import CartItem from "./CartItem.svelte";
-  
-    export let items = [
-      {
-        id: "p1",
-        title: "Test",
-        price: 9.99
-      },
-      {
-        id: "p2",
-        title: "Test",
-        price: 9.99
-      }
-    ];
+
+    //we can import it using any name we want 
+    //in this case I am calling it CartsItem
+    import CartsItem from './Cart-store'
+
+    let items = null
+
+    CartsItem.subscribe(subsItems=>{
+      items = subsItems
+      console.log(subsItems)
+    })
+    // export let items = [
+    //   {
+    //     id: "p1",
+    //     title: "Test",
+    //     price: 9.99
+    //   },
+    //   {
+    //     id: "p2",
+    //     title: "Test",
+    //     price: 9.99
+    //   }
+    // ];
   </script>
   
   <style>

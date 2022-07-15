@@ -23,30 +23,19 @@
       margin: 1rem 0;
     }
   
-    h1 {
-      font-size: 1.25rem;
-      font-family: "Roboto Slab", serif;
-      margin: 0;
-    }
-  
-    h2 {
-      font-size: 1rem;
-      margin: 0;
-      color: #494949;
-    }
-  
-    p {
-      margin: 0;
-    }
   </style>
   
   <div class="product">
     <div>
-      <h1 class="text-gray-700">{title}</h1>
-      <h2>{price}</h2>
-      <p class="text-gray-700">{description}</p>
+      <h1 class="text-gray-700 text-2xl font-sans">
+        {title}
+      </h1>
+      <h2 class="text-gray-700 text-3xl font-extrabold">
+        {price}
+      </h2>
+      <p class="text-gray-700 font-normal">{description}</p>
     </div>
-    <div>
+    <div class="border flex">
       <Button on:click={addToCart}>Add to Cart</Button>
     </div>
   </div>
